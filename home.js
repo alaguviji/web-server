@@ -1,17 +1,7 @@
 var express = require('express');
 var app = express ();
 
-var middleware = {
-  requireAuthentication: function(req, res, next){
-    console.log('Successfully Authenticated');
-    next();
-  },
-  logger: function(req, res, next){
-    console.log(req.method +" "+ req.originalUrl+" " + new Date());
-    next();
-  }
-};
-
+var middleware = require('./middleware.js');
 
 app.listen(3000);
 
