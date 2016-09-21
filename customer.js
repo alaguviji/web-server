@@ -1,7 +1,8 @@
 var express = require('express');
 var app = express();
 
-app.listen(3000);
+
+app.listen(3001);
 
 app.get('/customers', function(req,res){
   customer ={
@@ -21,7 +22,6 @@ app.get('/accounts', function(req,res){
   res.send(JSON.stringify(account));
 
 });
-
 
 
 console.log("Webserver Started");
